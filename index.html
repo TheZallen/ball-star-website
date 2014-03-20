@@ -28,15 +28,14 @@
 
       <blockquote>
         <p><span class="fui-mail"></span> Contact </p>
-        <small><a href="http://www.zak-allen.com">Zachary Allen</a></small>
+        <small><a href="mailto:zacharyallen2016@u.northwestern.edu">Zachary Allen</a></small>
         <small><a href="mailto:patrickflynn2015@u.northwestern.edu">Patrick Flynn</a></small>
         <small><a href="mailto:jeremychase2015@u.northwestern.edu">Jeremy Chase</a></small>
       </blockquote>
       <div class="buttonsBottom">
         <p class="img-comment">EECS 349<br>Northwestern University<br>Professor Douglas Downey</p>
         <a href="#fakelink" class="btn btn-block btn-lg btn-primary"><span class="fui-new"></span> Download Paper</a>
-        <a href="#fakelink" class="btn btn-block btn-lg btn-primary"><span class="fui-cmd"></span> Download Source Code</a>
-        <a href="#fakelink" class="btn btn-block btn-lg btn-primary"><span class="fui-eye"></span> View on Github</a>
+        <a href="#fakelink" class="btn btn-block btn-lg btn-primary"><span class="fui-eye"></span> Watch Video</a>
       </div>
     </div>
     <div class="container">
@@ -47,7 +46,7 @@
             <img src="images/icons/svg/retina.svg" alt="Compas" class="tile-image big-illustration">
             <h3 class="tile-title">Problem</h3>
             <p>Predicting NBA All-Star selections.</p>
-            <a class="btn btn-primary btn-large btn-block" href="#">More info</a>
+            <a class="btn btn-primary btn-large btn-block scroll" href="#problem">More info</a>
           </div>
         </div>
 
@@ -55,8 +54,8 @@
           <div class="tile">
             <img src="images/icons/svg/map.svg" alt="Infinity-Loop" class="tile-image">
             <h3 class="tile-title">Solution</h3>
-            <p>Using Binary Decision trees and Weka.</p>
-            <a class="btn btn-primary btn-large btn-block" href="#">Check it out</a>
+            <p>Using Binary Naive Bayes and Weka.</p>
+            <a class="btn btn-primary btn-large btn-block scroll" href="#solution">Check it out</a>
           </div>
         </div>
 
@@ -64,43 +63,70 @@
           <div class="tile">
             <img src="images/icons/svg/clipboard.svg" alt="Pensils" class="tile-image">
             <h3 class="tile-title">Results</h3>
-            <p>98% accuracy might sound too good to be true.</p>
-            <a class="btn btn-primary btn-large btn-block" href="#">See the results</a>
+            <p>All-star selection might be more than Statistics.</p>
+            <a class="btn btn-primary btn-large btn-block scroll" href="#results">See the results</a>
           </div>
         </div>
 
         
 
       </div> <!-- /tiles -->
-      <div class="demo-row typography-row">
+      <div class="demo-row typography-row" id="problem">
       	<div class="demo-title">
-      		<h3 class="demo-panel-title">Typography</h3>
+      		<h2>Problem</h2>
       	</div>
-      	 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <strong>Donec ullamcorper</strong> nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p class="lead">NBA All-Stars are not selected efficiently. Because All-Star selection has serious Economic implications, this is a problem worth solving.</p>
+      	 <p>The professional sports industry is a <strong>billion</strong> dollar industry. The majority of the revenue is a derivative of the iconic nature of star players. Star players most easily rise to prominence through all star selection. An inquiry into the economic implications of all star selections is out of the scope of this project, but would likely reveal that the stardom of players or lack thereof has enormous economic implications in the advertising, sales, and media industries across the nation.</p>
       	
-	       <img src="images/exaple-image.jpg" alt="exaple-image" class="img-rounded img-responsive">
-	       <p class="img-comment"><strong>Note:</strong> gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+	       <img src="images/2012Kevin-Durant-LeBron-James.jpg" alt="exaple-image" class="img-rounded img-responsive">
+	       <p class="img-comment"><strong>Image 1:</strong> Lebron James fights Kevin Durant for the ball in the 2012 All-Star game.</p>
       		
-				<p class="lead">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<p>With this in mind, we devised an algorithm to predict NBA all-star selections in a given season of professional basketball based off of statistics in the previous season. Besides the economic utility, this project is also interesting to casual fans and sports statistic enthusiasts.</p>
       		
-      	
-	     <blockquote>
-          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus.</p>
-          <small>Steve Jobs, CEO Apple</small>
-        </blockquote>
-      		
-      		
-	          <p><small>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</small></p>
-      		
-      	
       </div><!-- /.demo-row -->
  
 
-      
+      <div class="demo-row typography-row" id="solution">
+        <div class="demo-title">
+          <h2>Solution</h2>
+        </div>
+         <p>The algorithm accesses the statistics from all-stars and non all-starts since the inception of the all-star era in the NBA (1951) from Basketball-reference.com. This information was used in conjunction with naïve Bayes nets to classify all-stars vs non all-stars. After significant trial and error, we found that naïve Bayes best classified the All-Stars, minimizing false positives while simultaneously verifying the majority of actual selections statistically.</p>
+        
+         <img src="images/referencetable.png" alt="exaple-image" class="img-rounded img-responsive">
+         <p class="img-comment"><strong>Image 2:</strong> Example of 2011 top players by Win Share (WS) data table from basketball-reference.com</p>
+          
+        <p>We used data from Basketball Reference (basketball-reference.com), a sabermetric sports statistic website. The site offered NBA player statistics in csv format. The data used statistical categories including:</p>
+          
+        
+       <blockquote>
+          <p> Age, Team, Games, GS, Minutes played, FG, FGA, 2 PT, 2 PTA, 3 PT, 3PTA, FT, FTA, OFF REB, DEF REB, TOT REB, AST, STL, BLK, TO, PF, PTS, FG%, 2pt %, 3pt %, FT, WIN SHARES. </small>
+        </blockquote>
 
-      
+        <img src="images/fig1.png" alt="exaple-image" class="img-rounded img-responsive">
+         <p class="img-comment"><strong>Table 1:</strong> Example Set of 8 Players Stats from 11-12 Classifications for 12-13</p>
+        
+      </div><!-- /.demo-row -->
 
-      
+       <div class="demo-row typography-row" id="results">
+        <div class="demo-title">
+          <h2>Results</h2>
+        </div>
+         <p>We at first employed a decision tree with pruning to predict the all-stars. This approach resulted in highly encouraging projected results <strong>(90%+)</strong> but in reality were worse than chance at predicting all-stars. <strong>(10%+)</strong>. In reaction to this setback, we attempted new methods. These methods included Naïve Bayes, Multilayer Perceptron, and Classification via clustering. The figure below gives an estimate of composite accuracy, because some models gave heavy amounts of false positives, while other models were extremely conservative in selection.</p>
+        
+         <img src="images/2012-all-star-team.jpg" alt="exaple-image" class="img-rounded img-responsive">
+         <p class="img-comment"><strong>Image 3:</strong> 2012 All-Star Team with East Team on top and West Team on bottom.</p>
+
+         <img src="images/fig2.png" alt="exaple-image" class="img-rounded img-responsive">
+         <p class="img-comment"><strong>Table 2:</strong> Different Machine Learning techniques used and brief synopsis of outcomes.</p>
+          
+        <p class="lead">In the end we chose Naïve Bayes due to the fact that it was the best blend of Conservative and Aggressive classification approaches.</p>
+          
+        
+       <blockquote>
+          <p>This classification suggests that, based on past selections, around half of players selected are not as statistically accomplished as past selections. This may mean that the statistical criteria for selection change fairly rapidly from year to year, or that statistics are not as crucial in the selection process as one might commonly believe. </small>
+        </blockquote>
+        
+      </div><!-- /.demo-row -->
 
     </div> <!-- /container -->
 
